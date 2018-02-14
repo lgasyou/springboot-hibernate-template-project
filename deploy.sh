@@ -4,9 +4,9 @@ REGISTRY=192.168.0.105
 SERVER=192.168.0.105
 
 docker rmi xenon-website
-mvn clean package docker:build
+mvn clean package docker:build -Pproduct
 docker tag xenon-website ${REGISTRY}:5000/xenon-website
-docker pull ${REGISTRY}:5000/xenon-website
+docker push ${REGISTRY}:5000/xenon-website
 ssh xenon@${SERVER} "~/deploy.sh"
 
 # remote server
@@ -16,6 +16,6 @@ ssh xenon@${SERVER} "~/deploy.sh"
 # docker stop server
 # docker rm server
 
-# deploy.sh
+# profiles.deploy.sh
 # docker pull $REGISTRY/xenon-website:latest
 # docker run -it -d -p 8080:8080 --name server ${REGISTRY}:5000/xenon-website

@@ -4,6 +4,7 @@ import com.xenon.entrance.entity.User;
 import com.xenon.entrance.service.UserService;
 import com.xenon.entrance.util.ControllerUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,12 +18,12 @@ public class UserController {
     @Resource
     private UserService userService;
 
-    @RequestMapping("/info")
+    @RequestMapping(value = "/info", method = RequestMethod.GET)
     public String getUsers() {
         return userService.getUsers().toString();
     }
 
-    @RequestMapping("/add")
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
     public Object add(@RequestParam String username) {
         User user = userService.add(username);
         Map<String, Object> result = ControllerUtil.generateReturnValue(user != null);

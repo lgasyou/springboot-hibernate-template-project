@@ -16,7 +16,7 @@ public class FileController {
     private FileService fileService;
 
     // Downloads one file by its url.
-    @RequestMapping(value = "/download/{url}", method = RequestMethod.GET)
+    @RequestMapping(value = "/download/{url:.+}", method = RequestMethod.GET)
     public byte[] downloadFile(@PathVariable("url") String url) {
         try {
             return fileService.download(url);

@@ -1,8 +1,8 @@
-package com.xenon.entrance.controller;
+package com.xenon.xenonweb.controller;
 
-import com.xenon.entrance.entity.User;
-import com.xenon.entrance.service.UserService;
-import com.xenon.entrance.util.ControllerUtil;
+import com.xenon.xenonweb.entity.User;
+import com.xenon.xenonweb.service.UserService;
+import com.xenon.xenonweb.util.ControllerUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;

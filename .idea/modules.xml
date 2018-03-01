@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/xenonwebsite.iml" filepath="$PROJECT_DIR$/xenonwebsite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xenonweb.iml" filepath="$PROJECT_DIR$/xenonweb.iml" />
     </modules>
   </component>
 </project>

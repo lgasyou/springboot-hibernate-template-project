@@ -1,4 +1,4 @@
-package com.xenon.entrance.service;
+package com.xenon.xenonweb.service;
 
 import org.springframework.stereotype.Service;
 

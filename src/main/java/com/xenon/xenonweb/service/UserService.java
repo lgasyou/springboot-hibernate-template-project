@@ -1,7 +1,7 @@
-package com.xenon.entrance.service;
+package com.xenon.xenonweb.service;
 
-import com.xenon.entrance.dao.UserDao;
-import com.xenon.entrance.entity.User;
+import com.xenon.xenonweb.dao.UserDao;
+import com.xenon.xenonweb.entity.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

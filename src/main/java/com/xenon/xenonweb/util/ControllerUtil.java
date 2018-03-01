@@ -1,4 +1,4 @@
-package com.xenon.entrance.util;
+package com.xenon.xenonweb.util;
 
 import java.util.HashMap;
 import java.util.Map;

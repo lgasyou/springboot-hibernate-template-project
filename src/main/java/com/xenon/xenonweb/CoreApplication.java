@@ -1,4 +1,4 @@
-package com.xenon.entrance;
+package com.xenon.xenonweb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

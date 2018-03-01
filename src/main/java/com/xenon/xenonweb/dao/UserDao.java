@@ -1,6 +1,6 @@
-package com.xenon.entrance.dao;
+package com.xenon.xenonweb.dao;
 
-import com.xenon.entrance.entity.User;
+import com.xenon.xenonweb.entity.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

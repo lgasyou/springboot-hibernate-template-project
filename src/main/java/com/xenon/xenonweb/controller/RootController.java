@@ -1,13 +1,13 @@
-package com.xenon.entrance.controller;
+package com.xenon.xenonweb.controller;
 
-import com.xenon.entrance.service.RootService;
+import com.xenon.xenonweb.service.RootService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
-@RestController
+@Controller
 public class RootController {
 
     @Resource
@@ -15,7 +15,7 @@ public class RootController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String root() {
-        return rootService.hello();
+        return "index";
     }
 
 }

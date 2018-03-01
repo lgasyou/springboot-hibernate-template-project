@@ -1,4 +1,4 @@
-package com.xenon.entrance.entity;
+package com.xenon.xenonweb.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

@@ -1,4 +1,4 @@
-package com.xenon.xenonweb.service;
+package com.xenon.webapi.service;
 
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Value;

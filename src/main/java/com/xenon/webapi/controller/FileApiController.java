@@ -1,6 +1,6 @@
-package com.xenon.xenonweb.controller;
+package com.xenon.webapi.controller;
 
-import com.xenon.xenonweb.service.FileService;
+import com.xenon.webapi.service.FileService;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @RestController
-public class FileController {
+@RequestMapping("/api")
+public class FileApiController {
 
     @Resource
     private FileService fileService;

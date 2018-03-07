@@ -1,8 +1,8 @@
-package com.xenon.xenonweb.controller;
+package com.xenon.webapi.controller;
 
-import com.xenon.xenonweb.entity.User;
-import com.xenon.xenonweb.service.UserService;
-import com.xenon.xenonweb.util.ControllerUtil;
+import com.xenon.webapi.entity.User;
+import com.xenon.webapi.service.UserService;
+import com.xenon.webapi.util.ApiControllerUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,8 +12,8 @@ import javax.annotation.Resource;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/api/user")
+public class UserApiController {
 
     @Resource
     private UserService userService;
@@ -26,8 +26,11 @@ public class UserController {
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public Object add(@RequestParam String username) {
         User user = userService.add(username);
-        Map<String, Object> result = ControllerUtil.generateReturnValue(user != null);
-        result.put("user", user);
+        boolean isSuccessful = user != null;
+        Map<String, Object> result = ApiControllerUtil.generateReturnValue(isSuccessful);
+        if (isSuccessful) {
+            result.put("user", user);
+        }
         return result;
     }
 

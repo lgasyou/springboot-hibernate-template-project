@@ -15,14 +15,14 @@ public class UserApiController {
     @Resource
     private UserService userService;
 
-    // Gets all of the information of users.
-    @GetMapping("/users")
-    public Object getUsers() {
-        return userService.getUsers();
+    // 通过id获取用户信息
+    @GetMapping("/users/{id}")
+    public Object getUserById(@PathVariable Long id) {
+        return userService.getUserById(id);
     }
 
-    @PostMapping("/users/{username}")
-    public Object addUserByUsername(@PathVariable String username) {
+    @PostMapping("/users")
+    public Object addUserByUsername(@RequestParam String username) {
         User user = userService.add(username);
         boolean isSuccessful = user != null;
         Map<String, Object> result = ApiControllerUtil.generateStatus(isSuccessful);

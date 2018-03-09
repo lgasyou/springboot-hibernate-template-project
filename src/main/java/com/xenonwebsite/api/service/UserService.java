@@ -20,7 +20,7 @@ public class UserService {
     public User add(String username) {
         User user = new User();
         user.setUsername(username);
-        return userDao.insert(user);
+        return userDao.save(user);
     }
 
 }

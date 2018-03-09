@@ -1,4 +1,4 @@
-package com.xenon.webpage.controller;
+package com.xenonwebsite.view.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package com.xenon.webapi.service;
+package com.xenonwebsite.api.service;
 
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,18 +25,24 @@ public class FileService {
         response.flushBuffer();
     }
 
+    public String upload(MultipartFile multipartFile) throws IOException {
+        String fileName = multipartFile.getOriginalFilename();
+        File file = new File(ROOT_PATH + fileName);
+
+        boolean directoryExists = !file.getParentFile().exists() && file.getParentFile().mkdirs();
+        if (directoryExists) {
+            multipartFile.transferTo(file);
+            return fileName;
+        }
+        return null;
+    }
+
     // Returns file urls.
     public List<String> upload(List<MultipartFile> files) throws IOException {
         List<String> urls = new ArrayList<>();
         for (MultipartFile uploadFile : files) {
-            String fileName = uploadFile.getOriginalFilename();
-            File file = new File(ROOT_PATH + fileName);
-
-            boolean directoryExists = !file.getParentFile().exists() && file.getParentFile().mkdirs();
-            if (directoryExists) {
-                uploadFile.transferTo(file);
-                urls.add(fileName);
-            }
+            String fileName = upload(uploadFile);
+            urls.add(fileName);
         }
         return urls;
     }

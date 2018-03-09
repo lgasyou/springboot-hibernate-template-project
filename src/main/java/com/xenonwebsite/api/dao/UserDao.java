@@ -1,6 +1,6 @@
-package com.xenon.webapi.dao;
+package com.xenonwebsite.api.dao;
 
-import com.xenon.webapi.entity.User;
+import com.xenonwebsite.api.entity.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.xenon.webapi.entity;
+package com.xenonwebsite.api.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

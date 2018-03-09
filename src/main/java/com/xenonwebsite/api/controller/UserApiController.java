@@ -18,7 +18,13 @@ public class UserApiController {
     // 通过id获取用户信息
     @GetMapping("/users/{id}")
     public Object getUserById(@PathVariable Long id) {
-        return userService.getUserById(id);
+        User user = userService.getUserById(id);
+        boolean isSuccessful = user != null;
+        Map<String, Object> result = ApiControllerUtil.generateStatus(isSuccessful);
+        if (isSuccessful) {
+            result.put("user", user);
+        }
+        return result;
     }
 
     @PostMapping("/users")

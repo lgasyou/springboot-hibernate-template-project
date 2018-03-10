@@ -1,4 +1,4 @@
-package com.xenonwebsite.api.entity;
+package com.xenonwebsite.entity;
 
 import lombok.Data;
 
@@ -6,14 +6,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Data
+// 网站角色
 @Entity
-public class User {
+@Data
+public class SystemRole {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    private String username;
+    // 角色名称
+    private String name;
 
 }

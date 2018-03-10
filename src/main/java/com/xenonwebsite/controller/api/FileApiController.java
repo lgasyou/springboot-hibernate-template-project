@@ -1,7 +1,7 @@
-package com.xenonwebsite.api.controller;
+package com.xenonwebsite.controller.api;
 
-import com.xenonwebsite.api.service.FileService;
-import com.xenonwebsite.api.util.ApiControllerUtil;
+import com.xenonwebsite.service.FileService;
+import com.xenonwebsite.util.ApiControllerUtil;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 

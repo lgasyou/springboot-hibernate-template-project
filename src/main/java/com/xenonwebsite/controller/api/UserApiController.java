@@ -1,8 +1,8 @@
-package com.xenonwebsite.api.controller;
+package com.xenonwebsite.controller.api;
 
-import com.xenonwebsite.api.entity.User;
-import com.xenonwebsite.api.service.UserService;
-import com.xenonwebsite.api.util.ApiControllerUtil;
+import com.xenonwebsite.entity.User;
+import com.xenonwebsite.service.UserService;
+import com.xenonwebsite.util.ApiControllerUtil;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

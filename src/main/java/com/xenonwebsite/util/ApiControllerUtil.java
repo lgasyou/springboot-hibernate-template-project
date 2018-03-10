@@ -1,4 +1,4 @@
-package com.xenonwebsite.api.util;
+package com.xenonwebsite.util;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -19,9 +19,10 @@ public class UserService implements UserDetailsService {
         return userDao.findUserById(id);
     }
 
-    public User add(String username) {
+    public User add(String username, String password) {
         User user = new User();
         user.setUsername(username);
+        user.setPassword(password);
         return userDao.save(user);
     }
 

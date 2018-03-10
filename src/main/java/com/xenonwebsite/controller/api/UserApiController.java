@@ -27,9 +27,12 @@ public class UserApiController {
         return result;
     }
 
+    // 创建一个权限为"ROLE_USER"的普通用户
     @PostMapping("/users")
-    public Object addUserByUsername(@RequestParam String username) {
-        User user = userService.add(username);
+    public Object createUser(
+            @RequestParam String username,
+            @RequestParam String password) {
+        User user = userService.add(username, password);
         boolean isSuccessful = user != null;
         Map<String, Object> result = ApiControllerUtil.generateStatus(isSuccessful);
         if (isSuccessful) {
